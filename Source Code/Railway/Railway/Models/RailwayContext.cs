@@ -14,6 +14,6 @@ namespace Railway.Models
         public DbSet<User> Users { get; set; }
         public DbSet<Station> Stations { get; set; }
         public DbSet<Ticket> Tickets { get; set; }
-        public ISession Session { get; internal set; }
+       
     }
 }
