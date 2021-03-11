@@ -1,0 +1,58 @@
+﻿@model RaiwaySysterm.Models.UserDetail
+
+@{
+    ViewData["Title"] = "UserProfile";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+
+}
+<br />
+
+<div id="layoutAuthentication">
+    <div id="layoutAuthentication_content">
+        <main>
+            <div class="container animate-box">
+                <div class="row justify-content-center">
+                    <div class="col-lg-7">
+                        <div class="card shadow-lg border-0 rounded-lg mt-5">
+                            <div class="card-header"><h3 class="text-center font-weight-light my-4">Profile User</h3></div>
+                            <div class="card-body">
+                                <form>
+                                    <table class="table-bordered">
+                                        <dl class="dl-horizontal">
+                                            <dt>
+                                                <label>Full Name</label>
+                                            </dt>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.FullName)
+                                            </dd>
+                                            <dt>
+                                                <label>Age</label>
+                                            </dt>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.Age)
+                                            </dd>
+                                            <dt>
+                                                <label>Gender</label>
+                                            </dt>
+                                            <dd>
+                                                @Html.DisplayFor(model => model.Gender)
+                                            </dd>
+                                            
+                                            <div>
+                                                @Html.ActionLink("Edit", "UpdateUser", "UserDetail")
+                                            </div>
+                                        </dl>
+                                    </table>
+                                </form>
+
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
+</div>
+
