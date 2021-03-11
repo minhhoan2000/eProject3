@@ -1,0 +1,87 @@
+﻿@model RaiwaySysterm.Models.RegisterDetail
+@{
+    ViewData["Title"] = "Register";
+}
+   
+@using (Html.BeginForm("Register", "UserDetail", FormMethod.Post))
+{
+
+    <div id="layoutAuthentication">
+        <div id="layoutAuthentication_content">
+            <main>
+                <div class="container animate-box">
+                    <div class="row justify-content-center">
+                        <div class="col-lg-7">
+                            <div class="card shadow-lg border-0 rounded-lg mt-5">
+                                <div class="card-header"><h3 class="text-center font-weight-light my-4">Create User</h3></div>
+                                <div class="card-body">
+                                    <form asp-action="Register">
+                                        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+                                        <div class="form-row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Full Name</label>
+                                                    <input asp-for="FullName" class="form-control" />
+                                                    <span asp-validation-for="FullName" class="text-danger"></span>
+                                                </div>
+                                            </div>
+
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label"> Name Account</label>
+                                                    <input asp-for="NameAccount" class="form-control" />
+                                                    <span asp-validation-for="NameAccount" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="form-row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Password</label>
+                                                    <input asp-for="Password" class="form-control" />
+                                                    <span asp-validation-for="Password" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                           
+                                        </div>
+                                        <div class="form-row">
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Confirm password</label>
+                                                    <input asp-for="ConfPass" class="form-control" />
+                                                    <span asp-validation-for="ConfPass" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Age</label>
+                                                    <input asp-for="Age" class="form-control" />
+                                                    <span asp-validation-for="Age" class="text-danger"></span>
+                                                </div>
+                                            </div>
+                                            <div class="col-md-6">
+                                                <div class="form-group">
+                                                    <label class="control-label">Gender</label>
+                                                    <input asp-for="Gender" class="form-control" />
+                                                    <span asp-validation-for="Gender" class="text-danger"></span>
+                                                </div>
+                                            </div>
+
+                                        </div>
+                                       
+                                       
+                                        <div class="form-group">
+                                            <input type="submit" value="Create" class="btn btn-primary" />
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+
+}
