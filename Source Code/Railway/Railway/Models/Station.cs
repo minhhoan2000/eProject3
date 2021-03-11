@@ -16,7 +16,7 @@ namespace Railway.Models
         public string TimeStart { get; set; }
         public string FromWhere { get; set; }
         public string ToWhere { get; set; }
-        public ICollection<Train> Trains { get; set; }
-        public ICollection<Reservation> Reservations { get; set; }
+        public Train Trains { get; set; }
+        public Reservation Reservations { get; set; }
     }
 }

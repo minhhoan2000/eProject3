@@ -34,8 +34,8 @@ namespace Railway.Models
         [Required]
         public int Sleeper { get; set; }
         [Required]
-        public Station StationID { get; set; }
-        public ICollection<Station> Stations{get;set;}
+        public string StationID { get; set; }
+        public Station Stations{get;set;}
        
     }
 
