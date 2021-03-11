@@ -23,9 +23,8 @@ namespace Railway.Controllers
 
         public IActionResult Index()
         {
-         
             
-            
+           
             return View();
         }
 
