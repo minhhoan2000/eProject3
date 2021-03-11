@@ -1,0 +1,58 @@
+﻿@model IEnumerable<Railway.Models.Station>
+
+
+@{
+    ViewData["Title"] = "Search Policy";
+}
+<h1>@ViewData["Title"]</h1>
+<div style="border-style: solid;
+        border-color: blue;
+    ">
+    <table class="table" style="color:red;">
+        <thead>
+            <tr>
+                <th>
+                    Train Name
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.FromWhere)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.ToWhere)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.TimeStart)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.StationName)
+                </th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in ViewBag.trains)
+            {
+                <tr>
+                    <td>
+                       @item.TrainName
+                    </td>
+                    <td>
+                        @item => item.FromWhere
+                    </td>
+                    <td>
+                        @item => item.ToWhere
+                    </td>
+                    <td>
+                        @item => item.TimeStart
+                    </td>
+                    <td>
+                        @item => item.StationName
+                    </td>
+
+                </tr>
+            }
+
+        </tbody>
+    </table>
+</div>
+
+

@@ -1,0 +1,54 @@
+﻿@model IEnumerable<Railway.Models.Train>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+
+</p>
+
+<script>
+    $(document).ready(function () {
+       
+        $('input[type=date]').each(function () {
+            
+            var today = new Date();
+            var dd = today.getDate();
+            var mm = today.getMonth() + 1; //January is 0!
+            var yyyy = today.getFullYear();
+            if (dd < 10) {
+                dd = '0' + dd
+            }
+            if (mm < 10) {
+                mm = '0' + mm
+            }
+
+            today = yyyy + '-' + mm + '-' + dd;
+            //$(this).attr("min", "1971-01-01");
+            $(this).attr("min", today);
+        })
+    });
+
+    $(' input[type=date]').keydown(function (e) {
+
+        e.preventDefault();
+    })
+</script>
+
+@using (Html.BeginForm("Search", "Home", FormMethod.Get))
+{
+<p style="border:2px;width:70%;margin:auto;">
+    <label>From:</label>  <input type="text" name="from" class="form-control" placeholder="tphcm" /> <br /><br />
+    To: <input type="text" name="to" class="form-control" placeholder="tphcm" /> <br /><br />
+    <input type="date" name="tim" required />
+
+    
+
+    <input type="submit" value="Tìm kiếm" />
+</p>
+}
+
+
