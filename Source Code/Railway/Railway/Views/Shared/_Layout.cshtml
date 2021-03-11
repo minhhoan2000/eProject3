@@ -1,0 +1,227 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>@ViewData["Title"] - Railway</title>
+    <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="~/css/site.css" />
+    <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css">
+    <link href="http://fonts.googleapis.com/css?family=Cookie" rel="stylesheet" type="text/css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <link rel="stylesheet" href="~/Content/Class1.css">
+    <link rel="stylesheet" href="~/Content/footer.css">
+    <link rel="stylesheet" href="~/Content/bootstrap.min.css" />
+    <script src = "https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js" ></script>
+</head>
+<style>
+    body {
+        font-family: "Lato", sans-serif;
+        background-image: url('../../images/galaxy-wallpaper-4.jpg');
+        background-size: cover;
+    }
+
+    .sidenav {
+        height: 100%;
+        width: 0;
+        position: fixed;
+        z-index: 1;
+        top: 0;
+        left: 0;
+        background-color: #111;
+        overflow-x: hidden;
+        transition: 0.5s;
+        padding-top: 60px;
+    }
+
+        .sidenav a {
+            padding: 8px 8px 8px 32px;
+            text-decoration: none;
+            font-size: 15px;
+            color: #818181;
+            display: block;
+            transition: 0.3s;
+        }
+
+            .sidenav a:hover {
+                color: #f1f1f1;
+            }
+
+        .sidenav .closebtn {
+            position: absolute;
+            top: 0;
+            right: 25px;
+            font-size: 36px;
+            margin-left: 50px;
+        }
+
+    /* The container <div> - needed to position the dropdown content */
+
+
+    /* Dropdown Content (Hidden by Default) */
+
+
+    .destinations {
+        width: 100%;
+        background: #FFFFFF;
+        padding-top: 115px;
+        padding-bottom: 116px;
+    }
+
+    .section_subtitle {
+        font-family: 'Oswald', sans-serif;
+        font-size: 12px;
+        font-weight: 400;
+        color: #72728c;
+        line-height: 0.75;
+        text-transform: uppercase;
+        letter-spacing: 0.2em;
+    }
+
+    .section_title {
+        color: #181818;
+        margin-top: 26px;
+    }
+
+    .destinations_row {
+        margin-top: 99px;
+    }
+
+    .destination_image {
+        width: 100%;
+    }
+
+        .destination_image img {
+            max-width: 100%;
+        }
+
+    .spec_offer {
+        position: absolute;
+        top: 15px;
+        left: 16px;
+        width: 118px;
+        height: 36px;
+        background: #181818;
+    }
+
+        .spec_offer a {
+            display: block;
+            font-family: 'Oswald', sans-serif;
+            font-size: 16px;
+            color: #FFFFFF;
+            line-height: 36px;
+            font-weight: 400;
+        }
+
+    .destinations_container {
+        width: calc(100% + 30px);
+        left: -15px;
+    }
+
+    .destination {
+        width: calc(100% / 3);
+        padding-left: 15px;
+        padding-right: 15px;
+        margin-bottom: 33px;
+    }
+</style>
+<body>
+    <br />
+    <br />
+    <br />
+
+    @RenderSection("Scripts", required: false)
+    <header class="w3-display-container w3-content w3-wide" style="max-width:1000px; id=" home">
+        <img class="w3-image" src="~/Images/Home.jpg" alt="Architecture" width="1500" height="800">
+       
+        <div class="w3-display-middle w3-margin-top w3-center ">
+            <h1 class="w3-xxlarge w3-text-white"><span class="w3-padding w3-black w3-opacity-min"><b>Railway revesertion </b></span> <span class="w3-hide-small w3-text-light-grey"></span></h1>
+            <br />
+            <br />
+            <br />
+            @RenderBody()
+        </div>
+    </header>
+    <br />
+    <br />
+    <!-- Navbar (sit on top) -->
+    <div class="w3-top">
+        <div class="w3-bar w3-white w3-wide w3-padding w3-card">
+            <a href="~/Home/index" class="w3-bar-item w3-button"><b>Railway revesertion</b> </a>
+
+            <!-- Float links to the right. Hide them on small screens -->
+            <div class="w3-right w3-hide-small">
+                <a href="~/Home/index" class="w3-bar-item w3-button">Home</a>
+                <a href="#Contactus" class="w3-bar-item w3-button">Contact us</a>
+
+                <a href="#Login" class="w3-bar-item w3-button">Login</a>
+
+
+
+                <a href="#logout" class="w3-bar-item w3-button">Logout</a>
+                <a href="#" class="w3-bar-item w3-button"><span cursor:pointer" onclick="openNav()">&#9776;</span></a>
+                <div id="mySidenav" class="sidenav">
+                   
+                </div>
+
+
+
+                <!--a href="~/Home/Register" class="w3-bar-item w3-button" data-toggle="modal" data-target="#register">Register</a>-->
+
+
+
+
+
+                <script>
+                    function openNav() {
+                        document.getElementById("mySidenav").style.width = "200px";
+
+                        document.body.style.backgroundColor = "rgba(0,0,0,0.4)";
+                    }
+
+                    function closeNav() {
+                        document.getElementById("mySidenav").style.width = "0";
+                        document.body.style.backgroundColor = "white";
+
+                    }
+                    </script>
+            </div>
+        </div>
+        <!--silebar-->
+
+    </div>
+
+
+
+    <!-- Header -->
+
+    
+    <hr />
+
+
+
+    <!-- The content of your page would go here. -->
+    <footer class="footer-distributed">
+        <div class="footer-left">
+            <h3>Railway <span>Reservation System</span></h3>
+            <p class="footer-links" style="padding-left:100px">
+                <a href="#"></a>
+                <a href="~/Home/index">Home</a>
+                ·
+                <a href="#">About</a>
+                ·
+                <a href="#">Contact</a>
+            </p>
+            <p class="footer-company-name" style="padding-left:115px">Railway reservation &copy; 2021</p>
+            <p class="footer-company-name" style="padding-left:115px">Num:19001812</p>
+            <p class="footer-company-name" style="padding-left:115px">Address:590 CMT8 Stress,HCM,VN.</p>
+            <div class="footer-icons" style="padding-left:115px">
+                <a href="https://www.facebook.com/login.php"><i class="fa fa-facebook"></i></a>
+                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="#"><i class="fa fa-linkedin"></i></a>
+                <a href="#"><i class="fa fa-github"></i></a>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

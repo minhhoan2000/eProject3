@@ -1,0 +1,83 @@
+﻿@model Railway.Models.Train
+
+@{
+    ViewData["Title"] = "CreateTrain";
+     Layout = "~/Views/Shared/_LayoutAdmin.cshtml";
+}
+
+<h1>CreateTrain</h1>
+
+<h4>Train</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="CreateTrain">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="TrainID" class="control-label"></label>
+                <input asp-for="TrainID" class="form-control" />
+                <span asp-validation-for="TrainID" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TrainName" class="control-label"></label>
+                <input asp-for="TrainName" class="form-control" />
+                <span asp-validation-for="TrainName" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RouteFrom" class="control-label"></label>
+                <input asp-for="RouteFrom" class="form-control" />
+                <span asp-validation-for="RouteFrom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RouteTo" class="control-label"></label>
+                <input asp-for="RouteTo" class="form-control" />
+                <span asp-validation-for="RouteTo" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="RoutFrom" class="control-label"></label>
+                <input asp-for="RoutFrom" class="form-control" />
+                <span asp-validation-for="RoutFrom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="TotalCom" class="control-label"></label>
+                <input asp-for="TotalCom" class="form-control" />
+                <span asp-validation-for="TotalCom" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="oneAC" class="control-label"></label>
+                <input asp-for="oneAC" class="form-control" />
+                <span asp-validation-for="oneAC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="twoAC" class="control-label"></label>
+                <input asp-for="twoAC" class="form-control" />
+                <span asp-validation-for="twoAC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="threeAC" class="control-label"></label>
+                <input asp-for="threeAC" class="form-control" />
+                <span asp-validation-for="threeAC" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Sleeper" class="control-label"></label>
+                <input asp-for="Sleeper" class="form-control" />
+                <span asp-validation-for="Sleeper" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="StationID" class="control-label"></label>
+                <input asp-for="StationID" class="form-control" />
+                <span asp-validation-for="StationID" class="text-danger"></span>
+            </div>
+           
+            
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
